@@ -21,9 +21,9 @@
   <body>
 
     <form>
-      <input id="query" type="text" placeholder="Enter a search value">
+      <input id="zip" type="text" placeholder="Enter a search value">
 
-      <button type="button">Click me</button>
+      <button disabled type="button">Click me</button>
 
 
     </form>  
@@ -49,10 +49,13 @@
           center: chicago
         });
 
+        var endpoint = "https://data.cityofchicago.org/resource/cwig-ma7x.json";
 
+
+        var url = endpoint + "?zip=" + $("#zip").val();
 
         $.ajax({
-              url: "https://data.cityofchicago.org/resource/cwig-ma7x.json",
+              url: url,
               type: "GET",
               data: {
                 "$limit" : 50
@@ -84,6 +87,13 @@
 
           });
 
+
+
+
+        
+
+        
+
       }
     </script>
 
@@ -92,7 +102,13 @@
   
       $("button").on("click", initMap)
 
-
+      $("#zip").on("input", function(e) {
+        if ($("#zip").val() != "") {
+          $("button").prop("disabled", false);
+        } else {
+          $("button").prop("disabled", true);
+        }
+      });
 
 
 
