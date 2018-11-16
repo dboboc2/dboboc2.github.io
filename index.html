@@ -21,7 +21,9 @@
     <link href="css/resume.min.css" rel="stylesheet">
 
     <style>
-        .btn-info {background-color: #1d5ded;} /* Blue, Resume button color */
+        .btn-info {background-color: #1d5ded;  /* Blue, Resume button color */
+                  text-shadow: #222222 1px 1px 0;} /* small shadow, makes it easier to read */
+        #BUT:hover{ background-color: #094dbc; }
     </style>
   </head>
 
@@ -54,9 +56,18 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
+            
+          <!-- removed awards
+            -
+            -
+            -
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
           </li>
+            -
+            -
+            -
+            -->
         </ul>
       </div>
     </nav>
@@ -73,7 +84,7 @@
             <a href="mailto:danielgboboc@gmail.com" style="font-size:75%">danielgboboc@gmail.com</a>
           </div>
           <p class="lead mb-1"></p>
-            <a href="img/resume_2018.pdf" target = "_blank" class="btn btn-info btn-lg" role="button" style="font-size:125%">Résumé</a>
+            <a href="img/resume_2018.pdf" target ="_blank" id = "BUT" class="btn btn-info btn-lg" role="button" style="font-size:125%">Résumé</a>
           <!--<button type="button" class="btn btn-primary" href="/img/resume_2018.pdf" style="width: 100px; height: 50px; font-size:125%">Résumé</button> -->
           <br><br>
           <div class="social-icons">
@@ -185,13 +196,14 @@
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+          
         <div class="my-auto">
           <h2 class="mb-5">Skills</h2>
 
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline dev-icons">
             <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
+              <i class="fab fa-C++"></i>
             </li>
             <li class="list-inline-item">
               <i class="fab fa-css3-alt"></i>
@@ -251,11 +263,13 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+          <p style="font-size:125%">Apart from being a Computer Science major, I enjoy spending most of my time playing videogames, stereotypical, I know. I play on several consoles, ranging from Nintendo Switch to PC. Recently, I purchased an Oculus Rift and have been loving every second of exploring virtual worlds.</p>
+          <p class="mb-0" style="font-size:125%">When forced to the non-virtual outdoors, I enjoy exploring downtown Chicago, exercising at the gym, and finding somewhere new or interesting to eat, as there seems to be an endless supply here.</p>
         </div>
       </section>
-
+        
+      <!-- removed awards section -->
+      <!--
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
@@ -291,7 +305,7 @@
           </ul>
         </div>
       </section>
-
+    -->
     </div>
 
     <!-- Bootstrap core JavaScript -->
